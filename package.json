@@ -1,0 +1,12 @@
+{
+  "name": "dikuang",
+  "version": "1.0.0",
+  "description": "地矿内参 - 内部资讯与决策支持平台",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r css img js index.html dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

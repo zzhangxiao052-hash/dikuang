@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地矿内参 - 内部资讯与决策支持平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="重庆市地矿集团" class="logo-img">
+                <span class="logo-text">重庆市地矿集团</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">首页</a>
+                <a href="#" class="nav-item">政策资讯</a>
+                <a href="#" class="nav-item">智能报告</a>
+                <a href="#" class="nav-item">预警中心</a>
+                <a href="#" class="nav-item nav-upload"><i class="fas fa-cloud-upload-alt"></i> 知识库</a>
+            </nav>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>管理员</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner区域 -->
+    <section class="banner">
+        <canvas id="particles-canvas"></canvas>
+        <div class="banner-content">
+            <h1 class="banner-title">地矿内参</h1>
+            <p class="banner-subtitle">内部资讯与决策支持平台</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索政策、资讯、报告...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    搜索
+                </button>
+            </div>
+            <div class="hot-tags">
+                <span class="tag-label">热门搜索：</span>
+                <a href="#" class="tag">国企改革</a>
+                <a href="#" class="tag">自然资源政策</a>
+                <a href="#" class="tag">十五五规划</a>
+                <a href="#" class="tag">生态环保</a>
+                <a href="#" class="tag">招投标</a>
+            </div>
+        </div>
+        <!-- 装饰元素 -->
+        <div class="banner-decoration">
+            <div class="geo-element geo-1"></div>
+            <div class="geo-element geo-2"></div>
+            <div class="geo-element geo-3"></div>
+        </div>
+    </section>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <!-- 今日简报区 -->
+        <section class="daily-briefing">
+            <div class="section-header-center">
+                <h2 class="section-title-hero">今日简报</h2>
+                <p class="section-date-large">2024年3月16日 星期六</p>
+            </div>
+            <div class="briefing-card">
+                <div class="briefing-content">
+                    <div class="ai-badge">
+                        <i class="fas fa-sparkles"></i>
+                        AI智能摘要
+                    </div>
+                    <p class="briefing-text">
+                        <strong>【政策动态】</strong>国务院发布《关于加强地质矿产勘查工作的指导意见》，明确提出加大战略性矿产资源勘查力度，支持国有地勘单位改革发展。
+                        <br><br>
+                        <strong>【行业要闻】</strong>重庆市自然资源局召开2024年度地质勘查工作会议，部署全年重点任务，强调绿色勘查和科技创新。
+                        <br><br>
+                        <strong>【预警提示】</strong>本周有2项重要申报截止：①国家级绿色矿山申报（3月20日截止）②市级科技创新项目申报（3月22日截止）
+                    </p>
+                    <div class="briefing-actions">
+                        <button class="btn-primary"><i class="fas fa-book-open"></i> 查看完整简报</button>
+                        <button class="btn-outline"><i class="fas fa-history"></i> 历史简报</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 智能预警区 -->
+        <section class="alert-section">
+            <div class="section-header-center">
+                <h2 class="section-title-hero">智能预警</h2>
+                <a href="#" class="view-all-center">查看全部 <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="alert-list">
+                <div class="alert-item alert-urgent">
+                    <div class="alert-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="alert-content">
+                        <span class="alert-tag urgent">紧急</span>
+                        <h4>国家级绿色矿山申报即将截止</h4>
+                        <p>距离截止还剩 <strong>4天</strong>，请尽快完成申报材料准备</p>
+                    </div>
+                    <div class="alert-time">2024-03-16</div>
+                </div>
+                <div class="alert-item alert-important">
+                    <div class="alert-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="alert-content">
+                        <span class="alert-tag important">重要</span>
+                        <h4>市级科技创新项目申报通知</h4>
+                        <p>符合集团业务方向，建议积极申报</p>
+                    </div>
+                    <div class="alert-time">2024-03-15</div>
+                </div>
+                <div class="alert-item alert-normal">
+                    <div class="alert-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="alert-content">
+                        <span class="alert-tag normal">关注</span>
+                        <h4>同行企业中标重大项目</h4>
+                        <p>四川省地矿局中标某大型矿产勘查项目，金额约2.3亿元</p>
+                    </div>
+                    <div class="alert-time">2024-03-14</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分类内容模块 -->
+        <section class="category-section">
+            <div class="section-header-center">
+                <h2 class="section-title-hero">内容分类</h2>
+            </div>
+            <div class="category-grid">
+                <!-- 国家层面政策 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3>国家层面政策</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">自然资源部发布矿产资源管理新规</a>
+                            <div class="item-actions">
+                                <span class="date">03-15</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">国企改革三年行动收官总结</a>
+                            <div class="item-actions">
+                                <span class="date">03-14</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">生态环境保护"十四五"规划解读</a>
+                            <div class="item-actions">
+                                <span class="date">03-12</span>
+                                <button class="btn-collect collected" title="已收藏"><i class="fas fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 重庆市地方政策 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-city"></i>
+                        <h3>重庆市地方政策</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">重庆市自然资源"十四五"规划发布</a>
+                            <div class="item-actions">
+                                <span class="date">03-15</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">市国资委发布国企考核新办法</a>
+                            <div class="item-actions">
+                                <span class="date">03-13</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">渝北区绿色矿山建设实施方案</a>
+                            <div class="item-actions">
+                                <span class="date">03-11</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 国企经营管理案例 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>国企经营管理案例</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">【正面】某地勘院数字化转型成功经验</a>
+                            <div class="item-actions">
+                                <span class="date">03-14</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">【反面】某国企项目管理失误案例分析</a>
+                            <div class="item-actions">
+                                <span class="date">03-12</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">【正面】混合所有制改革典型案例</a>
+                            <div class="item-actions">
+                                <span class="date">03-10</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 同行动态 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>同行动态</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">四川省地矿局发布年度工作报告</a>
+                            <div class="item-actions">
+                                <span class="date">03-15</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">贵州地矿集团中标重大项目</a>
+                            <div class="item-actions">
+                                <span class="date">03-13</span>
+                                <button class="btn-collect collected" title="已收藏"><i class="fas fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">云南地质调查院技术创新成果</a>
+                            <div class="item-actions">
+                                <span class="date">03-11</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 技术创新 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>技术创新</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">无人机航测技术在地质勘查中的应用</a>
+                            <div class="item-actions">
+                                <span class="date">03-14</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">AI辅助矿产资源预测系统研发</a>
+                            <div class="item-actions">
+                                <span class="date">03-12</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">三维地质建模技术新突破</a>
+                            <div class="item-actions">
+                                <span class="date">03-10</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 重庆市国企动态 -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-building"></i>
+                        <h3>重庆市国企动态</h3>
+                    </div>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">市国资委召开一季度工作会议</a>
+                            <div class="item-actions">
+                                <span class="date">03-15</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">重庆能源集团与央企签署合作协议</a>
+                            <div class="item-actions">
+                                <span class="date">03-13</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">市属国企2023年度考核结果公布</a>
+                            <div class="item-actions">
+                                <span class="date">03-11</span>
+                                <button class="btn-collect" title="收藏"><i class="far fa-star"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="category-more">更多 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        <!-- 决策深度建议 -->
+        <section class="expert-advice">
+            <div class="section-header-center">
+                <h2 class="section-title-hero">决策深度建议</h2>
+                <p class="section-date-large">基于地矿集团现状的专业化分析</p>
+            </div>
+            <div class="advice-grid">
+                <div class="advice-card">
+                    <div class="advice-tag">政策导向</div>
+                    <h4>《关于加强地勘工作指导意见》解读</h4>
+                    <p class="advice-text">建议集团加大战略性矿产资源储备，积极争取市级专项资金支持，强化绿色勘查技术应用。</p>
+                    <a href="#" class="advice-more">详情 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="advice-card">
+                    <div class="advice-tag">经营管理</div>
+                    <h4>数字化转型成功案例分析</h4>
+                    <p class="advice-text">借鉴同类企业经验，在二季度启动“数字矿山”二期建设，重点优化生产成本核算模块。</p>
+                    <a href="#" class="advice-more">详情 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="advice-card">
+                    <div class="advice-tag">行业趋势</div>
+                    <h4>绿色矿山评价标准更新</h4>
+                    <p class="advice-text">建议对照新标准对下属矿区开展自查，确保符合年度考核要求，提升集团品牌影响力。</p>
+                    <a href="#" class="advice-more">详情 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 协同平台与外部资源 -->
+        <section class="related-resources">
+            <div class="resources-container">
+                <div class="resource-group">
+                    <span class="group-label">内部协同：</span>
+                    <div class="group-links">
+                        <a href="#"><i class="fas fa-brain"></i> 地矿大脑</a>
+                        <a href="#"><i class="fas fa-database"></i> 地勘院知识库</a>
+                    </div>
+                </div>
+                <div class="resource-group">
+                    <span class="group-label">外部资源：</span>
+                    <div class="group-links">
+                        <a href="#">自然资源部</a>
+                        <a href="#">重庆市国资委</a>
+                        <a href="#">重庆市规资局</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 地矿内参 - 重庆市地质矿产研究院 版权所有</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
