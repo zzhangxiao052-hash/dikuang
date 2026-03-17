@@ -4,7 +4,7 @@
   "description": "地矿内参 - 内部资讯与决策支持平台",
   "main": "index.html",
   "scripts": {
-    "build": "if not exist dist mkdir dist && xcopy /E /I /Y css dist\\css && xcopy /E /I /Y img dist\\img && xcopy /E /I /Y js dist\\js && copy /Y index.html dist\\"
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "",
