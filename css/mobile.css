@@ -140,32 +140,35 @@ body {
 
 /* ==================== 侧边菜单 ==================== */
 .m-menu-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.5);
     z-index: 999;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .m-menu-overlay.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .m-side-menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 260px;
-    height: 100vh;
+    height: 100%;
     background: white;
     z-index: 1001;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
 }
 
 .m-side-menu.active {
