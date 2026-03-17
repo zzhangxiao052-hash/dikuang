@@ -1,0 +1,607 @@
+/* 地矿内参 - 移动端样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #1a4b8c;
+    --primary-light: #2d7dd2;
+    --primary-dark: #0d2b4f;
+    --accent-gold: #d4a84b;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f5f7fa;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+    background-color: #e8e8e8;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+body {
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* 手机外壳容器 */
+.phone-frame {
+    width: 375px;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: var(--bg-light);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 420px) {
+    .phone-frame {
+        width: 100%;
+        box-shadow: none;
+    }
+    body {
+        background-color: var(--bg-light);
+    }
+}
+
+/* ==================== 顶部导航栏 ==================== */
+.m-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-blue));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.m-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.m-logo {
+    height: 32px;
+    width: auto;
+}
+
+.m-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.m-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.m-notification {
+    position: relative;
+    color: white;
+    font-size: 18px;
+}
+
+.m-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e74c3c;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 8px;
+}
+
+.m-avatar {
+    font-size: 20px;
+    color: white;
+}
+
+/* ==================== 搜索栏 ==================== */
+.m-search {
+    position: sticky;
+    top: 50px;
+    background: white;
+    padding: 10px 15px;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.m-search-box {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 8px 12px;
+    gap: 8px;
+}
+
+.m-search-box i {
+    color: #999;
+    font-size: 14px;
+}
+
+.m-search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.m-search-box input::placeholder {
+    color: #999;
+}
+
+/* ==================== Banner区域 ==================== */
+.m-banner {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-blue) 50%, var(--primary-dark) 100%);
+    padding: 30px 15px 25px;
+    text-align: center;
+}
+
+.m-banner-title {
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.m-banner-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.m-search-box-banner {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 8px 12px;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.m-search-box-banner i {
+    color: #999;
+    font-size: 14px;
+}
+
+.m-search-box-banner input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+
+.m-search-box-banner input::placeholder {
+    color: #999;
+}
+
+.m-hot-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.m-htag {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.m-htag:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==================== 功能导航网格 ==================== */
+.m-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.m-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.m-nav-item:active {
+    opacity: 0.7;
+}
+
+.m-nav-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* ==================== 内容区域 ==================== */
+.m-section {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.m-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.m-section-header h2 {
+    font-size: 16px;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.m-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.m-view-all {
+    font-size: 12px;
+    color: var(--primary-blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* ==================== 今日简报卡片 ==================== */
+.m-briefing-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.m-ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.m-ai-badge i {
+    font-size: 12px;
+}
+
+.m-briefing-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.m-briefing-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.m-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.m-tag.policy {
+    background: var(--primary-blue);
+}
+
+.m-tag.industry {
+    background: #f39c12;
+}
+
+.m-tag.warning {
+    background: #e74c3c;
+}
+
+.m-briefing-item p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.m-more-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.m-more-btn:active {
+    opacity: 0.8;
+}
+
+/* ==================== 智能预警列表 ==================== */
+.m-alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.m-alert-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+}
+
+.m-alert-item.urgent {
+    border-left-color: #e74c3c;
+}
+
+.m-alert-item.important {
+    border-left-color: #f39c12;
+}
+
+.m-alert-item.normal {
+    border-left-color: #3498db;
+}
+
+.m-alert-item:active {
+    background: #f0f0f0;
+}
+
+.m-alert-left {
+    flex: 1;
+}
+
+.m-alert-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.m-alert-tag.urgent {
+    background: #e74c3c;
+}
+
+.m-alert-tag.important {
+    background: #f39c12;
+}
+
+.m-alert-tag.normal {
+    background: #3498db;
+}
+
+.m-alert-left h4 {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+}
+
+.m-alert-left p {
+    font-size: 12px;
+    color: #888;
+}
+
+.m-arrow {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ==================== 资讯列表 ==================== */
+.m-news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.m-news-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.m-news-item:active {
+    background: #f0f0f0;
+}
+
+.m-news-content {
+    flex: 1;
+}
+
+.m-news-content h4 {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.m-news-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.m-news-tag {
+    background: rgba(26, 75, 140, 0.1);
+    color: var(--primary-blue);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.m-news-date {
+    color: #999;
+}
+
+.m-collect-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.m-collect-btn:active {
+    color: var(--accent-gold);
+}
+
+.m-collect-btn.collected {
+    color: var(--accent-gold);
+}
+
+/* ==================== 决策建议 ==================== */
+.m-advice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.m-advice-card {
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-blue);
+}
+
+.m-advice-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: rgba(26, 75, 140, 0.1);
+    color: var(--primary-blue);
+    border-radius: 3px;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.m-advice-card h4 {
+    font-size: 14px;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.m-advice-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ==================== 返回PC端 ==================== */
+.m-back-pc {
+    padding: 15px;
+    text-align: center;
+    background: white;
+    margin-bottom: 10px;
+}
+
+.m-back-pc a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.m-back-pc a:active {
+    opacity: 0.8;
+}
+
+/* ==================== 底部导航栏（H5不需要） ==================== */
+.m-tabbar {
+    display: none;
+}
+
+.phone-frame {
+    padding-bottom: 0;
+}
+
+/* ==================== 响应式调整 ==================== */
+@media (max-width: 480px) {
+    .m-nav-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .m-section {
+        margin-bottom: 8px;
+        padding: 12px;
+    }
+}

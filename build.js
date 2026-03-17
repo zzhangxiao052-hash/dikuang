@@ -21,5 +21,6 @@ copyDir('css', path.join(dist, 'css'));
 copyDir('img', path.join(dist, 'img'));
 copyDir('js', path.join(dist, 'js'));
 fs.copyFileSync('index.html', path.join(dist, 'index.html'));
+fs.copyFileSync('mobile.html', path.join(dist, 'mobile.html'));
 
 console.log('Build completed: dist/');
