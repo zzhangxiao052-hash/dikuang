@@ -1,0 +1,8 @@
+node_modules/
+dist/
+libreoffice_admin/
+*.wps
+*.dmp
+.DS_Store
+.env
+.env.local
