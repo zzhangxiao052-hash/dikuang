@@ -12,19 +12,31 @@
     <!-- 顶部导航栏 -->
     <header class="m-header">
         <div class="m-header-left">
+            <button class="m-menu-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
             <img src="img/logo.png" alt="logo" class="m-logo">
-            <span class="m-title">地矿内参</span>
+            <span class="m-title">重庆市地矿集团</span>
         </div>
-        <div class="m-header-right">
-            <a href="#" class="m-nav-link">政策资讯</a>
-            <a href="#" class="m-nav-link">智能报告</a>
-            <a href="#" class="m-nav-link">知识库</a>
-            <div class="m-notification">
-                <i class="fas fa-bell"></i>
-                <span class="m-badge">3</span>
-            </div>
+        <div class="m-header-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="搜索...">
         </div>
     </header>
+
+    <!-- 侧边导航菜单 -->
+    <div class="m-menu-overlay" id="menuOverlay"></div>
+    <nav class="m-side-menu" id="sideMenu">
+        <div class="m-menu-header">
+            <img src="img/logo.png" alt="logo" class="m-menu-logo">
+            <span>地矿内参</span>
+        </div>
+        <a href="#" class="m-menu-item active"><i class="fas fa-home"></i> 首页</a>
+        <a href="#" class="m-menu-item"><i class="fas fa-newspaper"></i> 政策资讯</a>
+        <a href="#" class="m-menu-item"><i class="fas fa-file-alt"></i> 智能报告</a>
+        <a href="#" class="m-menu-item"><i class="fas fa-cloud-upload-alt"></i> 知识库</a>
+        <div class="m-menu-divider"></div>
+        <a href="#" class="m-menu-item"><i class="fas fa-bell"></i> 消息通知 <span class="m-menu-badge">3</span></a>
+        <a href="#" class="m-menu-item"><i class="fas fa-user-circle"></i> 个人中心</a>
+    </nav>
 
     <!-- Banner区域 -->
     <section class="m-banner">
@@ -249,5 +261,6 @@
         <p>© 2024 地矿内参 - 重庆市地质矿产研究院</p>
     </div>
 </div>
+<script src="js/mobile.js"></script>
 </body>
 </html>
