@@ -93,13 +93,26 @@ body {
 .m-header-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+}
+
+.m-nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.m-nav-link:active {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .m-notification {
     position: relative;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .m-badge {
@@ -560,7 +573,225 @@ body {
     line-height: 1.5;
 }
 
-/* ==================== 返回PC端 ==================== */
+/* ==================== 简报操作按钮 ==================== */
+.m-briefing-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.m-briefing-actions .m-more-btn {
+    flex: 1;
+    margin-top: 0;
+}
+
+.m-outline-btn {
+    flex: 1;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    background: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.m-outline-btn:active { opacity: 0.7; }
+
+/* ==================== 子描述 ==================== */
+.m-sub-desc {
+    font-size: 11px;
+    color: #999;
+}
+
+.m-section-header h2 i {
+    color: var(--primary-blue);
+    margin-right: 4px;
+}
+
+.m-tag-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+}
+
+/* ==================== 决策参考 ==================== */
+.m-ref-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.m-ref-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.m-ref-body { flex: 1; }
+.m-ref-body h4 { font-size: 14px; color: var(--primary-dark); margin-bottom: 6px; }
+.m-ref-body p { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 8px; }
+.m-ref-body a { font-size: 12px; color: var(--primary-blue); text-decoration: none; }
+
+/* ==================== 案例借鉴 ==================== */
+.m-case-item {
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.m-case-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.m-case-badge.positive { background: rgba(26,75,140,0.1); color: var(--primary-blue); }
+.m-case-badge.negative { background: rgba(231,76,60,0.1); color: #e74c3c; }
+.m-case-item h4 { font-size: 14px; color: var(--primary-dark); margin-bottom: 6px; }
+.m-case-item p { font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 8px; }
+.m-case-item a { font-size: 12px; color: var(--primary-blue); text-decoration: none; }
+
+/* ==================== 重点提示 ==================== */
+.m-tip-card {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-blue);
+}
+
+.m-tip-card.urgent { border-left-color: #e74c3c; }
+.m-tip-card.important { border-left-color: #f39c12; }
+.m-tip-card.info { border-left-color: #3498db; }
+
+.m-tip-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    background: rgba(26,75,140,0.1);
+    color: var(--primary-blue);
+}
+
+.m-tip-card.urgent .m-tip-icon { background: rgba(231,76,60,0.1); color: #e74c3c; }
+.m-tip-card.important .m-tip-icon { background: rgba(243,156,18,0.1); color: #f39c12; }
+.m-tip-card.info .m-tip-icon { background: rgba(52,152,219,0.1); color: #3498db; }
+
+.m-tip-body { flex: 1; }
+.m-tip-body h4 { font-size: 14px; color: var(--text-dark); margin-bottom: 6px; }
+.m-tip-body ul { list-style: none; padding: 0; }
+.m-tip-body li { font-size: 12px; color: #666; padding: 3px 0 3px 14px; position: relative; }
+.m-tip-body li:before { content: "•"; position: absolute; left: 0; color: var(--primary-blue); }
+
+/* ==================== 资料中心 ==================== */
+.m-category-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.m-cat-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-dark);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+}
+
+.m-cat-header i {
+    color: var(--primary-blue);
+    margin-right: 6px;
+}
+
+.m-cat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.m-cat-item:last-child { border-bottom: none; }
+.m-cat-item a { font-size: 13px; color: #555; text-decoration: none; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 8px; }
+.m-cat-item a:active { color: var(--primary-blue); }
+.m-cat-item span { font-size: 11px; color: #aaa; flex-shrink: 0; }
+
+/* ==================== 决策深度建议（复用.m-advice-card） ==================== */
+.m-advice-card { margin-bottom: 10px; }
+.m-advice-card a { font-size: 12px; color: var(--primary-blue); text-decoration: none; margin-top: 6px; display: inline-block; }
+
+/* ==================== 协同平台与外部资源 ==================== */
+.m-resources {
+    padding: 12px 15px;
+}
+
+.m-res-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.m-res-group:last-child { margin-bottom: 0; }
+.m-res-label { font-size: 13px; font-weight: 600; color: var(--primary-dark); }
+.m-res-group a { font-size: 12px; color: #666; text-decoration: none; }
+.m-res-group a:active { color: var(--primary-blue); }
+.m-res-group i { color: var(--primary-blue); font-size: 12px; }
+
+/* ==================== 页脚 ==================== */
+.m-footer {
+    background: var(--primary-dark);
+    padding: 15px;
+    text-align: center;
+}
+
+.m-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.m-back-link:active { background: rgba(255,255,255,0.25); }
+
+.m-footer p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ==================== 返回PC端（旧，保留兼容） ==================== */
 .m-back-pc {
     padding: 15px;
     text-align: center;
