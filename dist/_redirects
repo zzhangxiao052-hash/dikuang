@@ -1,0 +1,6 @@
+/report /report.html 200
+/report/ /report.html 200
+/generated_report /generated_report.html 200
+/generated_report/ /generated_report.html 200
+/mobile /mobile.html 200
+/mobile/ /mobile.html 200

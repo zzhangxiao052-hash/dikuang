@@ -23,5 +23,7 @@ copyDir('js', path.join(dist, 'js'));
 fs.copyFileSync('index.html', path.join(dist, 'index.html'));
 fs.copyFileSync('mobile.html', path.join(dist, 'mobile.html'));
 fs.copyFileSync('report.html', path.join(dist, 'report.html'));
+fs.copyFileSync('generated_report.html', path.join(dist, 'generated_report.html'));
+fs.copyFileSync('_redirects', path.join(dist, '_redirects'));
 
 console.log('Build completed: dist/');

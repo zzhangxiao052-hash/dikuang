@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function processNextGroup() {
         if (currentGroupIndex >= taskGroups.length) {
-            loadingStatusText.textContent = "所有任务已完成！";
+            loadingStatusText.textContent = "所有任务已完成，即将跳转...";
             setTimeout(() => {
-                alert('报告生成完成！即将跳转到报告页面。');
-                // window.location.href = 'report-final.html';
-            }, 800);
+                loadingModal.classList.remove('visible');
+                window.location.href = 'generated_report.html';
+            }, 1000);
             return;
         }
 
