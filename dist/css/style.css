@@ -1321,3 +1321,10 @@ body {
     }
 }
 
+.briefing-date {
+    font-size: 13px;
+    color: #888;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
