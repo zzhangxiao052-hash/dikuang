@@ -846,6 +846,37 @@ body {
     color: #888;
 }
 
+/* ==================== 移动端入口按钮 ==================== */
+.mobile-entry-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(26, 75, 140, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 12px;
+}
+
+.mobile-entry-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(26, 75, 140, 0.6);
+}
+
+.mobile-entry-btn i {
+    font-size: 24px;
+}
+
 /* ==================== 页脚 ==================== */
 .footer {
     background: var(--primary-dark);
