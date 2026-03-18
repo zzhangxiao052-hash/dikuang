@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地矿内参 - 智能报告</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header header-solid"> <!-- 修改类名以应用固定背景 -->
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="重庆市地矿集团" class="logo-img">
+                <span class="logo-text">重庆市地矿集团</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item">首页</a>
+                <a href="#" class="nav-item">政策资讯</a>
+                <a href="report.html" class="nav-item">智能报告</a>
+                <a href="#" class="nav-item">预警中心</a>
+                <a href="#" class="nav-item nav-upload"><i class="fas fa-cloud-upload-alt"></i> 知识库</a>
+            </nav>
+            <div class="header-right">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span>管理员</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main-content" style="padding-top: 80px;"> <!-- 留出导航栏空间 -->
+        <section class="report-generator-section">
+            <div class="section-header-center">
+                <h2 class="section-title-hero">智能报告生成</h2>
+                <p class="section-date-large">自定义信息源和时间范围，一键生成决策内参</p>
+            </div>
+            
+            <div class="form-container">
+                <!-- 步骤一：网站选择 -->
+                <div class="form-step">
+                    <div class="form-step-header">
+                        <div class="step-number">1</div>
+                        <h3>选择采集网站</h3>
+                        <p>勾选需要作为信息来源的网站</p>
+                    </div>
+                    <div class="form-content">
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="zrzyb"> 自然资源部</label>
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="cqsgzj"> 重庆市规资局</label>
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="cqszfw"> 重庆市政府网</label>
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="scsdkj"> 四川省地矿局</label>
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="gzdkjt"> 贵州地矿集团</label>
+                            <label class="checkbox-label"><input type="checkbox" name="website" value="yndzy"> 云南地质调查院</label>
+                            <a href="#" class="more-link">更多...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤二：板块内容选择 -->
+                <div class="form-step">
+                    <div class="form-step-header">
+                        <div class="step-number">2</div>
+                        <h3>选择采集板块内容</h3>
+                        <p>根据所选网站，勾选具体的信息板块</p>
+                    </div>
+                    <div class="form-content">
+                        <!-- 示例：重庆市规资局 -->
+                        <div class="content-group">
+                            <h4>重庆市规资局</h4>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="gzj_zcfg"> 政策法规</label>
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="gzj_tzgg"> 通知公告</label>
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="gzj_sjjd"> 数据解读</label>
+                            </div>
+                        </div>
+                        <!-- 示例：重庆市政府网 -->
+                        <div class="content-group">
+                            <h4>重庆市政府网</h4>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="szfw_zfwj"> 政府文件</label>
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="szfw_zcjd"> 政策解读</label>
+                                <label class="checkbox-label"><input type="checkbox" name="content" value="szfw_hykb"> 会议快报</label>
+                            </div>
+                            <a href="#" class="more-link">更多...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤三：时间范围选择 -->
+                <div class="form-step">
+                    <div class="form-step-header">
+                        <div class="step-number">3</div>
+                        <h3>选择采集时间范围</h3>
+                        <p>定义信息的发布日期区间</p>
+                    </div>
+                    <div class="form-content">
+                        <div class="date-range-picker">
+                            <div class="date-input-group">
+                                <label for="start-date">开始日期</label>
+                                <input type="date" id="start-date" name="start-date">
+                            </div>
+                            <div class="date-input-group">
+                                <label for="end-date">结束日期</label>
+                                <input type="date" id="end-date" name="end-date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="form-actions">
+                    <button class="btn-primary btn-generate">
+                        <i class="fas fa-cogs"></i>
+                        生成策研内参
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 生成报告加载动画模态框 -->
+    <div class="loading-modal" id="loadingModal">
+        <div class="loading-modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="loading-animation-v2">
+                <div class="cube-grid">
+                    <div class="cube cube1"></div>
+                    <div class="cube cube2"></div>
+                    <div class="cube cube3"></div>
+                    <div class="cube cube4"></div>
+                    <div class="cube cube5"></div>
+                    <div class="cube cube6"></div>
+                    <div class="cube cube7"></div>
+                    <div class="cube cube8"></div>
+                    <div class="cube cube9"></div>
+                </div>
+                <div class="radar-scan"></div>
+            </div>
+            <div class="multi-progress-container" id="multiProgressContainer">
+                <!-- 进度条将由JS动态插入 -->
+            </div>
+            <div class="loading-status-text" id="loadingStatusText">
+                正在初始化报告生成模块...
+            </div>
+            <p class="loading-tip">这是一个模拟过程，完成后将自动跳转至报告页面。</p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 地矿内参 - 重庆市地质矿产研究院 版权所有</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>

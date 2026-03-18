@@ -14,16 +14,27 @@ function copyDir(src, dest) {
     }
 }
 
+function copyFile(src, dest) {
+    const parentDir = path.dirname(dest);
+    if (!fs.existsSync(parentDir)) fs.mkdirSync(parentDir, { recursive: true });
+    fs.copyFileSync(src, dest);
+}
+
 const dist = path.join(__dirname, 'dist');
-if (!fs.existsSync(dist)) fs.mkdirSync(dist);
+fs.rmSync(dist, { recursive: true, force: true });
+fs.mkdirSync(dist, { recursive: true });
 
 copyDir('css', path.join(dist, 'css'));
 copyDir('img', path.join(dist, 'img'));
 copyDir('js', path.join(dist, 'js'));
-fs.copyFileSync('index.html', path.join(dist, 'index.html'));
-fs.copyFileSync('mobile.html', path.join(dist, 'mobile.html'));
-fs.copyFileSync('report.html', path.join(dist, 'report.html'));
-fs.copyFileSync('generated_report.html', path.join(dist, 'generated_report.html'));
-fs.copyFileSync('_redirects', path.join(dist, '_redirects'));
+copyFile('index.html', path.join(dist, 'index.html'));
+copyFile('mobile.html', path.join(dist, 'mobile.html'));
+copyFile('report.html', path.join(dist, 'report.html'));
+copyFile('generated_report.html', path.join(dist, 'generated_report.html'));
+
+// Stable pretty routes for Cloudflare Pages without relying on _redirects.
+copyFile('mobile.html', path.join(dist, 'mobile', 'index.html'));
+copyFile('report.html', path.join(dist, 'report', 'index.html'));
+copyFile('generated_report.html', path.join(dist, 'generated_report', 'index.html'));
 
 console.log('Build completed: dist/');
