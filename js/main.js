@@ -11,7 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始化导航栏滚动效果
     initHeaderScroll();
+
+    // 初始化导航栏高亮
+    initNavHighlighting();
 });
+
+/**
+ * 导航栏高亮
+ */
+function initNavHighlighting() {
+    const navItems = document.querySelectorAll('.main-nav .nav-item');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    navItems.forEach(item => {
+        const itemPage = item.getAttribute('href').split('/').pop();
+        
+        // 移除所有现有的 active 类
+        item.classList.remove('active');
+
+        // 如果链接与当前页面匹配，则添加 active 类
+        if (itemPage === currentPage || (currentPage === '' && itemPage === 'index.html')) {
+            item.classList.add('active');
+        }
+    });
+}
 
 /**
  * 导航栏滚动效果
